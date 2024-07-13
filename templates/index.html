@@ -1,14 +1,11 @@
+{% extends 'base.html' %} {% block content %}
 <h1>Hello World</h1>
 
-<p> This is my first web page</p>
-<p>{{stuff|title}} </p>
+<p>This is my first web page</p>
+<p>{{stuff|title}}</p>
 
 <h3>Favorite Pizza</h3>
 
-{% for top in faviorites %}
+{% for top in faviorites %} {{top}}<br />
 
-{{top}}<br>
-
-{% endfor %}
-
-{{faviorites[0]|reverse}}
+{% endfor %} {{faviorites[0]|reverse}} {% endblock %}
